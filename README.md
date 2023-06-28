@@ -1,28 +1,40 @@
 # query-dsl-plus
 
-
 #### Brief introduction
 
 1. The foreground passes variable query parameters through strings
 2. The backend encapsulates the query scenario, a method that query all data
 
-
 #### Examples
+
 ![postman query1](postman_query1.png)
 ![postman query2](postman_query2.png)
 
+#### quick to import
+
+~~~xml
+
+<dependency>
+    <groupId>cn.ljserver.tool</groupId>
+    <artifactId>query-dsl-plus</artifactId>
+    <version>1.0.0-RELEASE</version>
+</dependency>
+~~~
 
 #### Installation tutorial
 
 1. deploy to you maven repository
 2. import into you project pom.xml
-3. extends SearchService
-4. function use
-    // search string, passed by the frontend, example: search age>18 and addr=addr
 
-    String search = "age>18,addr:addr";
+#### quick to use
 
-    BooleanExpression exp = this.buildPredicate(search, TestEntity.class);
+1. extends SearchService
+2. function use
+   // search string, passed by the frontend, example: search age>18 and addr=addr
+
+   String search = "age>18,addr:addr";
+
+   BooleanExpression exp = this.buildPredicate(search, TestEntity.class);
 
 #### Instructions for use
 
