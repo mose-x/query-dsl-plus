@@ -8,10 +8,10 @@
 #### Examples 
 ##### <font color= "#FF0000"> In practice, you need to use the encode URI, Here for the convenience of display, so all did not convert </font>
 
-![postman query1](postman_query1.png)
-![postman_query2.png](postman_query2.png)
-![postman_query3.png](postman_query3.png)
-![postman_query4.png](postman_query4.png)
+![postman query1](img/postman_query1.png)
+![postman_query2.png](img/postman_query2.png)
+![postman_query3.png](img/postman_query3.png)
+![postman_query4.png](img/postman_query4.png)
 
 #### quick to import
 
@@ -31,15 +31,17 @@
 
 #### quick to use
 
-1. extends SearchService
-2. function use
+1. DAO 层 extends QuerydslBinderCustomizer
+2. Service 层 extends SearchService
+3. function use
    // search string, passed by the frontend, example: search age>18 and addr=addr
 
    String search = "age>18,addr:addr";
 
    BooleanExpression exp = this.buildPredicate(search, TestEntity.class);
-![img_1.png](img_1.png)
-![img.png](img.png)
+![img_2.png](img/dao_extends.png)
+![img_1.png](img/api_use.png)
+![img.png](img/service_extends.png)
 
 #### Instructions for use
 
