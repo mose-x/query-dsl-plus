@@ -5,10 +5,13 @@
 1. The foreground passes variable query parameters through strings
 2. The backend encapsulates the query scenario, a method that query all data
 
-#### Examples
+#### Examples 
+##### In practice, you need to use the encode URI, Here for the convenience of display, so all did not convert
 
 ![postman query1](postman_query1.png)
-![postman query2](postman_query2.png)
+![postman_query2.png](postman_query2.png)
+![postman_query3.png](postman_query3.png)
+![postman_query4.png](postman_query4.png)
 
 #### quick to import
 
