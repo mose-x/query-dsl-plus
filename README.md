@@ -38,6 +38,8 @@
    String search = "age>18,addr:addr";
 
    BooleanExpression exp = this.buildPredicate(search, TestEntity.class);
+![img_1.png](img_1.png)
+![img.png](img.png)
 
 #### Instructions for use
 
