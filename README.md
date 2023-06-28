@@ -31,8 +31,8 @@
 
 #### quick to use
 
-1. DAO 层 extends QuerydslBinderCustomizer
-2. Service 层 extends SearchService
+1. DAO extends QuerydslBinderCustomizer
+2. Service extends SearchService
 3. function use
    // search string, passed by the frontend, example: search age>18 and addr=addr
 
