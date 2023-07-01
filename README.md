@@ -10,6 +10,7 @@
 1. webapi like this
 
 ![api-query.png](img/api-query.png)
+
 2. service like this, or it's harder, or it's subject to change at any time
 
 ![service-query.png](img/service-query.png)
