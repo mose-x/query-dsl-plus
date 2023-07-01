@@ -5,7 +5,21 @@
 1. The foreground passes variable query parameters through strings
 2. The backend encapsulates the query scenario, a method that query all data
 
-#### Examples 
+
+#### Before use querydsl-plus
+1. webapi like this
+
+![api-query.png](img/api-query.png)
+2. service like this, or it's harder, or it's subject to change at any time
+
+![service-query.png](img/service-query.png)
+
+##### if use querydsl-plus, like this, so easy
+
+![img_1.png](img/api_use.png)
+![img.png](img/service_extends.png)
+
+#### Postman Examples 
 ##### <font color= "#FF0000"> In practice, you need to use the encode URI, Here for the convenience of display, so all did not convert </font>
 
 ![postman query1](img/postman_query1.png)
