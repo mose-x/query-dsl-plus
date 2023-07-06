@@ -6,6 +6,7 @@
 
 1. The foreground passes variable query parameters through strings
 2. The backend encapsulates the query scenario, a method that query all data
+3. One search parameter for all requirements
 
 
 #### Before use querydsl-plus
@@ -13,21 +14,25 @@
 
 ![api-query.png](img/api-query.png)
 
-2. service like this, or it's harder, or it's subject to change at any time
+2. service like this, either it's harder (super many parameters, or simply passed with body), or the requirements may change at any time, causing the parameters to change
 
 ![service-query.png](img/service-query.png)
 
-##### if use querydsl-plus, like this, so easy
+##### if use querydsl-plus, like this, so easy and fast
 
 ![img_1.png](img/api_use.png)
+
 ![img.png](img/service_extends.png)
 
 #### Postman Examples 
 ##### <font color= "#FF0000"> In practice, you need to use the encode URI, Here for the convenience of display, so all did not convert </font>
 
 ![postman query1](img/postman_query1.png)
+
 ![postman_query2.png](img/postman_query2.png)
+
 ![postman_query3.png](img/postman_query3.png)
+
 ![postman_query4.png](img/postman_query4.png)
 
 #### quick to import
@@ -58,7 +63,9 @@
 
    BooleanExpression exp = this.buildPredicate(search, TestEntity.class);
 ![img_2.png](img/dao_extends.png)
+4. 
 ![img_1.png](img/api_use.png)
+
 ![img.png](img/service_extends.png)
 
 #### Instructions for use

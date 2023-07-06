@@ -4,20 +4,25 @@
 
 1. 前台通过字符串传递变量查询参数
 2. 后端封装查询场景，一种查询所有数据的方法
+-- --
+   即: 任何实体,都只需要5个接口, del,getById,add,update,list
 
+   其中list接口即通用查询接口(一个search参数搞定所有需求)
+-- --
 #### 在使用querydsl-plus之前
 
 1. webapi使用如下
 
 ![api-query.png](img/api-query.png)
 
-2. service 像这样写，或者更难，或者随时可能更改到
+2. service 像这样写，或者更难(参数超级多,或者干脆用body传递)，或者随时可能更改需求,导致参数发生变化
 
 ![service-query.png](img/service-query.png)
 
 ##### 如果使用了 querydsl-plus, 如下所示, 会变得非常简单
 
 ![img_1.png](img/api_use.png)
+
 ![img.png](img/service_extends.png)
 
 #### Postman 示例
@@ -25,8 +30,11 @@
 ##### <font color= "#FF0000"> 在实际操作中，需要使用编码URI，这里为了方便显示，所以全部没有转换 </font>
 
 ![postman query1](img/postman_query1.png)
+
 ![postman_query2.png](img/postman_query2.png)
+
 ![postman_query3.png](img/postman_query3.png)
+
 ![postman_query4.png](img/postman_query4.png)
 
 #### 快速导入
@@ -56,8 +64,11 @@
    String search = "age>18,addr:addr";
 
    BooleanExpression exp = this.buildPredicate(search, TestEntity.class);
+
    ![img_2.png](img/dao_extends.png)
+
    ![img_1.png](img/api_use.png)
+
    ![img.png](img/service_extends.png)
 
 #### 相关符号使用说明
