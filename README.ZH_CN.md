@@ -1,36 +1,35 @@
 # query-dsl-plus
 
-[中文简介·说明](README.ZH_CN.md)
+#### 简介
 
-#### Brief introduction
+1. 前台通过字符串传递变量查询参数
+2. 后端封装查询场景，一种查询所有数据的方法
 
-1. The foreground passes variable query parameters through strings
-2. The backend encapsulates the query scenario, a method that query all data
+#### 在使用querydsl-plus之前
 
-
-#### Before use querydsl-plus
-1. webapi like this
+1. webapi使用如下
 
 ![api-query.png](img/api-query.png)
 
-2. service like this, or it's harder, or it's subject to change at any time
+2. service 像这样写，或者更难，或者随时可能更改到
 
 ![service-query.png](img/service-query.png)
 
-##### if use querydsl-plus, like this, so easy
+##### 如果使用了 querydsl-plus, 如下所示, 会变得非常简单
 
 ![img_1.png](img/api_use.png)
 ![img.png](img/service_extends.png)
 
-#### Postman Examples 
-##### <font color= "#FF0000"> In practice, you need to use the encode URI, Here for the convenience of display, so all did not convert </font>
+#### Postman 示例
+
+##### <font color= "#FF0000"> 在实际操作中，需要使用编码URI，这里为了方便显示，所以全部没有转换 </font>
 
 ![postman query1](img/postman_query1.png)
 ![postman_query2.png](img/postman_query2.png)
 ![postman_query3.png](img/postman_query3.png)
 ![postman_query4.png](img/postman_query4.png)
 
-#### quick to import
+#### 快速导入
 
 ~~~xml
 
@@ -41,27 +40,27 @@
 </dependency>
 ~~~
 
-#### Installation tutorial
+#### 私有安装教程
 
-1. pull the query-dsl-plus repository
-2. deploy to you maven repository
-3. import into you project pom.xml
+1. 拉取query-dsl-plus代码仓库
+2. 发布到自己私有到maven服务器
+3. 在你项目的pom.xml文件中引入
 
-#### quick to use
+#### 快速上手
 
-1. DAO extends QuerydslBinderCustomizer
-2. Service extends SearchService
-3. function use
-   // search string, passed by the frontend, example: search age>18 and addr=addr
+1. DAO 继承 QuerydslBinderCustomizer
+2. Service 继承 SearchService
+3. 方法使用示例
+   // 搜索字符串，由前端传递, example: search age>18 and addr=addr
 
    String search = "age>18,addr:addr";
 
    BooleanExpression exp = this.buildPredicate(search, TestEntity.class);
-![img_2.png](img/dao_extends.png)
-![img_1.png](img/api_use.png)
-![img.png](img/service_extends.png)
+   ![img_2.png](img/dao_extends.png)
+   ![img_1.png](img/api_use.png)
+   ![img.png](img/service_extends.png)
 
-#### Instructions for use
+#### 相关符号使用说明
 
     case ":"  eq, example: search=name:jack, like sql >> name="jack" 
 
