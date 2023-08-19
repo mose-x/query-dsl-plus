@@ -1,7 +1,6 @@
 package cn.ljserver.tool.querydslplus.querydsl;
 
 import com.querydsl.core.types.dsl.BooleanExpression;
-import lombok.Data;
 import org.apache.commons.beanutils.ConvertUtils;
 
 import java.time.LocalDate;
@@ -13,7 +12,6 @@ import java.time.LocalTime;
  *
  * @param <T>
  */
-@Data
 public abstract class PredictResolver<T> {
     protected Class<T> clazz;
     protected SearchCriteria criteria;
@@ -30,4 +28,19 @@ public abstract class PredictResolver<T> {
 
     public abstract BooleanExpression getPredicate() throws Exception;
 
+    public Class<T> getClazz() {
+        return clazz;
+    }
+
+    public void setClazz(Class<T> clazz) {
+        this.clazz = clazz;
+    }
+
+    public SearchCriteria getCriteria() {
+        return criteria;
+    }
+
+    public void setCriteria(SearchCriteria criteria) {
+        this.criteria = criteria;
+    }
 }

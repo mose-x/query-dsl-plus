@@ -1,12 +1,11 @@
 package cn.ljserver.tool.querydslplus.querydsl;
 
+import cn.ljserver.tool.querydslplus.util.ArrayUtil;
+import cn.ljserver.tool.querydslplus.util.ClassUtil;
+import cn.ljserver.tool.querydslplus.util.FieldUtil;
 import com.querydsl.core.types.dsl.BooleanExpression;
 import com.querydsl.core.types.dsl.PathBuilder;
 import org.apache.commons.beanutils.ConvertUtils;
-import org.apache.commons.lang3.ArrayUtils;
-import org.apache.commons.lang3.ClassUtils;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.reflect.FieldUtils;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
@@ -27,18 +26,18 @@ public class LessThanOrEqualPredicate<T> extends PredictResolver {
         String path = this.getCriteria().getPath();
         PathBuilder entityPath = new PathBuilder(clazz, clazz.getName());
         // Resolve the path
-        String[] props = StringUtils.split(path, ".");
+        String[] props = path.split(Operator.pathSplit);
         // Target property name
         String targetProp = props[props.length - 1];
-        props = ArrayUtils.remove(props, props.length - 1);
+        props = ArrayUtil.remove(props, props.length -1);
         // The attribution class of the target attribute
         Class parentClass = clazz;
 
         // Resolve attribution classes
         for (String prop : props) {
             // Private properties can be obtained
-            Field field = FieldUtils.getField(parentClass, prop, true);
-            if (ClassUtils.isAssignable(field.getType(), Collection.class)) {
+            Field field = FieldUtil.getField(parentClass, prop, true);
+            if (ClassUtil.isAssignable(field.getType(), Collection.class)) {
                 entityPath = entityPath.get(prop, field.getType());
                 ParameterizedType aType = (ParameterizedType) field.getGenericType();
                 // The member type of the list object
@@ -49,11 +48,11 @@ public class LessThanOrEqualPredicate<T> extends PredictResolver {
             }
 
         }
-        Field targetField = FieldUtils.getField(parentClass, targetProp, true);
+        Field targetField = FieldUtil.getField(parentClass, targetProp, true);
         // The type of the target property
         Class valueType = targetField.getType();
         // If it is a collection class, get the member type
-        if (ClassUtils.isAssignable(valueType, Collection.class)) {
+        if (ClassUtil.isAssignable(valueType, Collection.class)) {
             ParameterizedType aType = (ParameterizedType) targetField.getGenericType();
             // The member type of the list object
             valueType = (Class) aType.getActualTypeArguments()[0];

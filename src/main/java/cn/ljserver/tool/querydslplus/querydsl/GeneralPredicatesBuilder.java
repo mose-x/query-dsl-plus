@@ -3,7 +3,6 @@ package cn.ljserver.tool.querydslplus.querydsl;
 import cn.ljserver.tool.querydslplus.exception.GenExceptCode;
 import cn.ljserver.tool.querydslplus.exception.ServiceException;
 import com.querydsl.core.types.dsl.BooleanExpression;
-import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -46,14 +45,14 @@ public final class GeneralPredicatesBuilder<T> {
 
     public BooleanExpression build(String search) {
         if (search != null) {
-            String[] searchArr = StringUtils.split(search, Operator.paramsSplit);
+            String[] searchArr = search.split(Operator.paramsSplit);
             int i = 0;
             String key = "key";
             for (String searchStr : searchArr) {
                 Pattern pattern = Pattern.compile(Operator.pattern);
                 if (searchStr.contains(Operator.or)) {
                     // Query criteria that exist or
-                    String[] orSearches = StringUtils.split(searchStr, Operator.or);
+                    String[] orSearches = searchStr.split(Operator.or);
                     List<SearchCriteria> searchList = new ArrayList<>();
                     for (String orSearch : orSearches) {
                         Matcher matcher = pattern.matcher(orSearch);

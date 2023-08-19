@@ -16,6 +16,9 @@ public class Operator {
     public static final String or = "~";
 
     public static final String paramsSplit = ",";
+
+    public static final String pathSplit = "\\.";
+
     public static final String valueSplit = "\\|";
 
     public static final String pattern = "(.+?)([:!*<>()@^#])(.*)";

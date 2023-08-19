@@ -1,11 +1,8 @@
 package cn.ljserver.tool.querydslplus.querydsl;
 
-import lombok.Data;
-
 /**
  * Search Criteria
  */
-@Data
 public class SearchCriteria {
 
     private String path;
@@ -22,4 +19,27 @@ public class SearchCriteria {
         this.value = value;
     }
 
+    public String getPath() {
+        return path;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public String getOperation() {
+        return operation;
+    }
+
+    public void setOperation(String operation) {
+        this.operation = operation;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
 }

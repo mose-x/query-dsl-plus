@@ -5,7 +5,7 @@
 
     <groupId>cn.ljserver.tool</groupId>
     <artifactId>query-dsl-plus</artifactId>
-    <version>1.0.0-RELEASE</version>
+    <version>1.1.0-RELEASE</version>
     <name>query-dsl-plus</name>
     <description>a tool about query dsl plus plugin</description>
     <url>https://github.com/mose-x/query-dsl-plus</url>
@@ -19,24 +19,14 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.18.8</version>
-        </dependency>
-        <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-core</artifactId>
-            <version>4.4.0</version>
+            <version>5.0.0</version>
         </dependency>
         <dependency>
             <groupId>commons-beanutils</groupId>
             <artifactId>commons-beanutils</artifactId>
             <version>1.9.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>3.1</version>
         </dependency>
     </dependencies>
 
