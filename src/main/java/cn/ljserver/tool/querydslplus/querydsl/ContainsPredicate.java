@@ -58,7 +58,7 @@ public class ContainsPredicate<T> extends PredictResolver {
             valueType = (Class) aType.getActualTypeArguments()[0];
         }
         String valueStr = this.getCriteria().getValue();
-        if (valueStr == null || "".equals(valueStr)) {
+        if (valueStr == null || valueStr.isEmpty()) {
             throw new Exception("The parameter value cannot be null");
         }
         return entityPath.getList(targetProp, valueType).contains(valueStr);

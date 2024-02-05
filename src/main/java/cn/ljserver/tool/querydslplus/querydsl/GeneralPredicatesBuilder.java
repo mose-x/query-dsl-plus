@@ -71,12 +71,12 @@ public final class GeneralPredicatesBuilder<T> {
             }
         }
 
-        if (params.size() == 0 && orParams.size() == 0) {
+        if (params.isEmpty() && orParams.isEmpty()) {
             return null;
         }
 
         BooleanExpression andResult = null;
-        if (params.size() > 0) {
+        if (!params.isEmpty()) {
             for (final SearchCriteria param : params) {
                 PredictResolver resolver = PredictProducer.generateResolver(clazz, param);
                 BooleanExpression exp;
@@ -99,11 +99,11 @@ public final class GeneralPredicatesBuilder<T> {
         }
 
         BooleanExpression orResult = null;
-        if (orParams.size() > 0) {
+        if (!orParams.isEmpty()) {
             for (final Map.Entry<String, List<SearchCriteria>> entry : orParams.entrySet()) {
                 List<SearchCriteria> scList = entry.getValue();
                 BooleanExpression tempResult = null;
-                if (scList != null && scList.size() > 0) {
+                if (scList != null && !scList.isEmpty()) {
                     for (final SearchCriteria param : scList) {
                         PredictResolver resolver = PredictProducer.generateResolver(clazz, param);
                         BooleanExpression exp;

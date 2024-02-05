@@ -59,7 +59,7 @@ public class LessThanOrEqualPredicate<T> extends PredictResolver {
         }
 
         String valueStr = this.getCriteria().getValue();
-        if (valueStr == null || "".equals(valueStr)) {
+        if (valueStr == null || valueStr.isEmpty()) {
             throw new Exception("The parameter value cannot be null");
         }
 

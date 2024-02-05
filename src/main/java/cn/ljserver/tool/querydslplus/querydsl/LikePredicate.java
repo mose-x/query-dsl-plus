@@ -65,7 +65,7 @@ public class LikePredicate<T> extends PredictResolver {
         }
         BooleanExpression ex = null;
         for (String value : values) {
-            if (value != null && !"".equals(value)) {
+            if (value != null && !value.isEmpty()) {
                 value = value.replaceAll("\\(", "\\\\(").replaceAll("\\)", "\\\\)");
             }
             String tempValue = (String) ConvertUtils.convert(value, valueType);
