@@ -7,8 +7,7 @@ public class SystemUtil {
         try {
             return System.getProperty("java.specification.version");
         } catch (SecurityException ex) {
-            System.err.println("Caught a SecurityException reading the system property '" + "java.specification.version"
-                    + "'; the SystemUtils property value will default to null.");
+            System.err.println("Caught a SecurityException reading the system property 'java.specification.version '; the SystemUtils property value will default to null.");
             return null;
         }
     }

@@ -112,10 +112,7 @@ public class ClassUtil {
                 return Float.TYPE.equals(toClass)
                         || Double.TYPE.equals(toClass);
             }
-            if (Boolean.TYPE.equals(cls)) {
-                return false;
-            }
-            if (Double.TYPE.equals(cls)) {
+            if (Boolean.TYPE.equals(cls) || Double.TYPE.equals(cls)) {
                 return false;
             }
             if (Float.TYPE.equals(cls)) {
