@@ -5,7 +5,7 @@
 
     <groupId>cn.ljserver.tool</groupId>
     <artifactId>query-dsl-plus</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1</version>
     <name>query-dsl-plus</name>
     <description>a tool about query dsl plus plugin</description>
     <url>https://github.com/mose-x/query-dsl-plus</url>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-core</artifactId>
-            <version>5.0.0</version>
+            <version>5.1.0</version>
             <scope>provided</scope>
         </dependency>
         <!--suppress VulnerableLibrariesLocal -->
