@@ -18,10 +18,11 @@
     </properties>
 
     <dependencies>
+        <!--suppress VulnerableLibrariesLocal -->
         <dependency>
             <groupId>com.querydsl</groupId>
             <artifactId>querydsl-core</artifactId>
-            <version>5.1.0</version>
+            <version>5.0.0</version>
             <scope>provided</scope>
         </dependency>
         <!--suppress VulnerableLibrariesLocal -->
