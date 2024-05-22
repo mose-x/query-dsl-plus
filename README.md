@@ -42,7 +42,7 @@
 <dependency>
     <groupId>cn.ljserver.tool</groupId>
     <artifactId>query-dsl-plus</artifactId>
-    <version>1.1.0-RELEASE</version>
+    <version>2.0.1</version>
 </dependency>
 ~~~
 
