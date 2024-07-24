@@ -18,7 +18,7 @@ import java.util.Objects;
  *
  * @param <T>
  */
-@SuppressWarnings({"unchecked", "rawtypes"})
+@SuppressWarnings({"unchecked", "rawtypes", "DuplicatedCode"})
 public class EqualPredicate<T> extends PredictResolver {
 
     public EqualPredicate(Class<T> clazz, SearchCriteria criteria) {

@@ -16,7 +16,7 @@ import java.util.Collection;
  *
  * @param <T>
  */
-@SuppressWarnings({"unchecked", "rawtypes"})
+@SuppressWarnings({"unchecked", "rawtypes", "DuplicatedCode"})
 public class LessThanOrEqualPredicate<T> extends PredictResolver {
     public LessThanOrEqualPredicate(Class<T> clazz, SearchCriteria criteria) {
         super(clazz, criteria);

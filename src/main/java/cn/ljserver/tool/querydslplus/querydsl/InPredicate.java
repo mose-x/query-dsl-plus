@@ -17,7 +17,7 @@ import java.util.List;
  *
  * @param <T>
  */
-@SuppressWarnings({"unchecked", "rawtypes"})
+@SuppressWarnings({"unchecked", "rawtypes", "DuplicatedCode"})
 public class InPredicate<T> extends PredictResolver {
 
     public InPredicate(Class<T> clazz, SearchCriteria criteria) {

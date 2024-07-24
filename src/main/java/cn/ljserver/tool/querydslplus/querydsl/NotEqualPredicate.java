@@ -19,7 +19,7 @@ import java.util.Objects;
  *
  * @param <T>
  */
-@SuppressWarnings({"unchecked", "rawtypes"})
+@SuppressWarnings({"unchecked", "rawtypes", "DuplicatedCode"})
 public class NotEqualPredicate<T> extends PredictResolver {
 
     public NotEqualPredicate(Class<T> clazz, SearchCriteria criteria) {

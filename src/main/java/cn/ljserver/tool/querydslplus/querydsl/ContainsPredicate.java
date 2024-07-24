@@ -15,7 +15,7 @@ import java.util.Collection;
  *
  * @param <T>
  */
-@SuppressWarnings({"unchecked", "rawtypes"})
+@SuppressWarnings({"unchecked", "rawtypes", "DuplicatedCode"})
 public class ContainsPredicate<T> extends PredictResolver {
     public ContainsPredicate(Class<T> clazz, SearchCriteria criteria) {
         super(clazz, criteria);
