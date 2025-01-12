@@ -39,11 +39,7 @@ public class InPredicate<T> extends PredictResolver {
         for (String prop : props) {
             // Private properties can be obtained
             Field field = FieldUtil.getField(parentClass, prop, true);
-            if (ClassUtil.isAssignable(field.getType(), Collection.class)) {
-                entityPath = entityPath.get(prop, field.getType());
-            } else {
-                entityPath = entityPath.get(prop, field.getType());
-            }
+            entityPath = entityPath.get(prop, field.getType());
         }
         String valueStr = this.getCriteria().getValue();
         String[] values = valueStr.split(Operator.valueSplit);
