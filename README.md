@@ -37,12 +37,23 @@
 
 #### quick to import
 
+##### 11-
 ~~~xml
 
 <dependency>
     <groupId>cn.ljserver.tool</groupId>
     <artifactId>query-dsl-plus</artifactId>
-    <version>2.0.1</version>
+    <version>2.0.2</version>
+</dependency>
+~~~
+
+##### 17+
+~~~xml
+
+<dependency>
+   <groupId>cn.ljserver.tool</groupId>
+   <artifactId>query-dsl-plus</artifactId>
+   <version>3.0.0</version>
 </dependency>
 ~~~
 
